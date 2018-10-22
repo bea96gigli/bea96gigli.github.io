@@ -1,21 +1,122 @@
 // Dimensions of sunburst.
-var width = 750;
+var width = 1110;
 var height = 600;
 var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
-  w: 150, h: 30, s: 3, t: 10
+  w: 350, h: 30, s: 3, t: 10
 };
 
 // Mapping of step names to colors.
 var colors = {
   "Ruoli Tradizionali": "#5687d1",
-  "Ruoli Strategici": "#7b615c",
-  "search": "#de783b",
-  "account": "#6ab975",
-  "other": "#a173d1",
-  "end": "#bbbbbb"
+  "Ruoli Strategici": "#9C807B",
+  "CAPACITY & AVAILABILITY  MGMT": "#DF34CE",
+  "CLOUD INFRASTRUCTURE": "#599A69",
+  "COLLABORATION SOLUTION": "#33B44B",
+  "DATA COMUNICATION": "#50BB63",
+  "DATA INFRASTRUCTURE": "#52B087",
+  "DATACENTER INFRASTRUCTURE": "#B0895E",
+  "DEVOPS INFRASTRUCTURE": "#6ab975",
+  "DR&BC INFRASTRUCTURE": "#70A77A",
+  "END USER INFRASTRUCTURE": "#C28F54",
+  "INFRASTRUCTURE AUTOMATION AND CONFIGURATION": "#4F905E",
+  "INFRASTRUCTURE FINANTIAL & CONTRACTS": "#B671D7",
+  "INFRASTRUCTURE for INNOVATION TECHONLOGY": "#6AA779",
+  "INFRASTRUCTURE MONITORING": "#D66BB8",
+  "INFRASTRUCTURE SERVICE MANAGEMENT": "#BA9858",
+  "INFRASTRUCTURE TRANSFORMATION": "#50C893",
+  "NETWORK INFRASTRUCTURE": "#D55DF2",
+  "SOFTWARE DEFINED INFRASTRUCTURE": "#5A9B66",
+  "SECURITY INFRASTRUCTURE": "#E55EBF",
+
+
+  "Functional Testing Engineer": "#D3D3D3",
+  "API Specialist ": "#D3D3D3",
+  "Build and Deploy Specialist": "#D3D3D3",
+  "DevOps Operator": "#D3D3D3",
+  "DevOps Specialist": "#D3D3D3",
+  "Build and Deploy Engineer": "#D3D3D3",
+  "Infrastructure Referent Application Transformation": "#D3D3D3",
+  "Mobile Specialist ": "#D3D3D3",
+  "PaaS & Container Specialist": "#D3D3D3",
+  "Performance Test Specialist ": "#D3D3D3",
+  "Test Automation Specialist": "#D3D3D3",
+
+  "Delivery Manager": "#D0D0D0",
+  "IT Supplier Relationship Manager": "#D0D0D0",
+  "ITO Process Specialist": "#D0D0D0",
+  "Knowledge Management specialist": "#D0D0D0",
+  "Open Source Software Specialist": "#D0D0D0",
+  "Program & Transition Manager": "#D0D0D0",
+  "Project Manager ": "#D0D0D0",
+  "Infrastructure Solution Architect": "#D0D0D0",
+
+  "Data Base Engineer": "#C8C8C8",
+  "Data Management Specialist": "#C8C8C8",
+  "Data Solution Architect": "#C8C8C8",
+  "Infrastructure Data Analyst/Scientist ": "#C8C8C8",
+
+  "Artificial Intelligence Specialist": "#C0C0C0",
+  "Blockchain Specialist": "#C0C0C0",
+  "IoT Specialist": "#C0C0C0",
+  "Technology Innovation Expert": "#C0C0C0",
+
+  "Cloud Mgmt Platform & Contract Expert": "#B8B8B8",
+  "Cloud Service Broker Specialist": "#B8B8B8",
+  "Private & Public Cloud Infrastructure Architect": "#B8B8B8",
+
+  "DataCenter Automation Specialist": "#B0B0B0",
+  "End User Automation Specialist": "#B0B0B0",
+  "Configuration Specialist": "#B0B0B0",
+
+  "Software Defined Data Center Specialist ": "#A9A9A9",
+  "Software Defined Network Specialist": "#A9A9A9",
+  "Software Defined Storage Specialist": "#A9A9A9",
+
+  "Data Communication Engineer": "#A5A5A5",
+  "Data Communication Specialist": "#A5A5A5",
+
+  "Collaboration Specialist": "#A5A5A5",
+
+  "Data Base Engineer": "#A0A0A0",
+  "Data Management Specialist": "#A0A0A0",
+  "Data Solution Architect": "#A0A0A0",
+  "Infrastructure Data Analyst/Scientist ": "#A0A0A0",
+
+  "Data Center Operator ": "#989898",
+  "Data Center System Engineer": "#989898",
+  "Data Center System Engineer": "#989898",
+  "Data Center System Specialist": "#989898",
+  "Scheduling Specialist": "#989898",
+
+  "End User IMAC Specialist": "#959595",
+  "End User Operator": "#959595",
+  "End User System Engineer ": "#959595",
+
+  "Problem Manager": "#909090",
+  "Service Catalog Manager": "#909090",
+  "Service Owner": "#909090",
+
+  "DR & Business Continuity Engineer": "#929292",
+  "DR & Business Continuity Specialist": "#929292",
+
+  "Data Communication Engineer": "#929292",
+  "Data Communication Specialist": "#929292",
+
+  "Infrastructure Contract Specialist": "#888888",
+  "Infrastructure Financial Specialist": "#888888",
+
+  "Network System Engineer": "#787878",
+  "Network Automation Specialist": "#787878",
+
+  "Capacity & Availability Specialist": "#696969",
+
+  "Monitoring Infrastructure engineer": "#696969",
+
+  "Security Infrastructure Specialist": "#696969"
+
 };
 
 // Total size of all segments; we set this later, after loading the data.
@@ -203,7 +304,7 @@ function drawLegend() {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 250, h: 30, s: 3, r: 3
+    w: 350, h: 30, s: 3, r: 3
   };
 
   var legend = d3.select("#legend").append("svg:svg")
