@@ -116,7 +116,6 @@ var colors = {
   "Monitoring Infrastructure engineer": "#696969",
 
   "Security Infrastructure Specialist": "#696969"
-
 };
 
 // Total size of all segments; we set this later, after loading the data.
