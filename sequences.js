@@ -33,7 +33,7 @@ var colors = {
 
 
   "Functional Testing Engineer": "#D3D3D3",
-  "API Specialist ": "#D3D3D3",
+  "API Specialist": "#D3D3D3",
   "Build and Deploy Specialist": "#D3D3D3",
   "DevOps Operator": "#D3D3D3",
   "DevOps Specialist": "#D3D3D3",
