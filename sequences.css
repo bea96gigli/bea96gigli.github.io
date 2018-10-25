@@ -8,7 +8,6 @@
   margin-top: 10px;
 }
 
-
 #main {
   float: left;
   width: 1110px;
@@ -28,9 +27,13 @@
   padding: 10px 0 0 3px;
 }
 
-#sequence text, #legend text {
+#sequence text, .label {
   font-weight: 400;
-  fill: #fff;
+   fill: white;
+}
+
+.header{
+    fill: black;
 }
 
 #chart {

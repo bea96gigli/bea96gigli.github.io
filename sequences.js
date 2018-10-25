@@ -14,11 +14,11 @@ var colors = {
   "Ruoli Strategici": "#9C807B",
   "CAPACITY & AVAILABILITY  MGMT": "#DF34CE",
   "CLOUD INFRASTRUCTURE": "#599A69",
-  "COLLABORATION SOLUTION": "#33B44B",
-  "DATA COMUNICATION": "#50BB63",
-  "DATA INFRASTRUCTURE": "#52B087",
+  "COLLABORATION SOLUTION": "#3BC655",
+  "DATA COMUNICATION": "#52B087",
+  "DATA INFRASTRUCTURE": "#6FBF7A",
   "DATACENTER INFRASTRUCTURE": "#B0895E",
-  "DEVOPS INFRASTRUCTURE": "#6ab975",
+  "DEVOPS INFRASTRUCTURE": "#50C893",
   "DR&BC INFRASTRUCTURE": "#70A77A",
   "END USER INFRASTRUCTURE": "#C28F54",
   "INFRASTRUCTURE AUTOMATION AND CONFIGURATION": "#4F905E",
@@ -26,7 +26,7 @@ var colors = {
   "INFRASTRUCTURE for INNOVATION TECHONLOGY": "#6AA779",
   "INFRASTRUCTURE MONITORING": "#D66BB8",
   "INFRASTRUCTURE SERVICE MANAGEMENT": "#BA9858",
-  "INFRASTRUCTURE TRANSFORMATION": "#50C893",
+  "INFRASTRUCTURE TRANSFORMATION": "#6ab975",
   "NETWORK INFRASTRUCTURE": "#D55DF2",
   "SOFTWARE DEFINED INFRASTRUCTURE": "#5A9B66",
   "SECURITY INFRASTRUCTURE": "#E55EBF",
@@ -286,6 +286,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
       .attr("y", b.h / 2)
       .attr("dy", "0.35em")
       .attr("text-anchor", "middle")
+      .attr("class", "label")
       .text(function(d) { return d.data.name; });
 
   // Merge enter and update selections; set position for all nodes.
@@ -303,33 +304,72 @@ function drawLegend() {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 350, h: 30, s: 3, r: 3
+    w: 350, h: 30, s: 3, r: 7
   };
 
   var legend = d3.select("#legend").append("svg:svg")
       .attr("width", li.w)
-      .attr("height", d3.keys(colors).length * (li.h + li.s));
+      .attr("height", (d3.keys(colors).length+3) * (li.h + li.s) + li.s * 3);
+
+    legend.append("svg:text")
+        .attr("x", (li.w / 3)+25)
+        .attr("y", (li.h / 2)+6)
+        .text("CLASSI")
+        .attr("class", "header")
+        .attr("font-family", "Arial")
+        .attr("font-size", "20px")
+        .attr("fill", "black");
+
+    legend.append("svg:text")
+        .attr("x", (li.w / 3) + 16)
+        .attr("y", 122)
+        .text("FAMIGLIE")
+        .attr("class", "header")
+        .attr("font-family", "Arial")
+        .attr("font-size", "20px")
+        .attr("fill", "black");
+
+    legend.append("svg:text")
+        .attr("x", (li.w / 3) + 32)
+        .attr("y", 750)
+        .text("RUOLI")
+        .attr("class", "header")
+        .attr("font-family", "Arial")
+        .attr("font-size", "20px")
+        .attr("fill", "black");
 
   var g = legend.selectAll("g")
       .data(d3.entries(colors))
       .enter().append("svg:g")
-      .attr("transform", function(d, i) {
-              return "translate(0," + i * (li.h + li.s) + ")";
-           });
+      .attr("transform", function (d, i) {
+          if (i > 19)
+              return "translate(0," + (i + 3) * (li.h + li.s) + ")";
+          if(i>1)
+              return "translate(0," + (i + 2) * (li.h + li.s) + ")";
+          else
+              return "translate(0," +  (i+1)* (li.h + li.s) + ")";
+      });
+
+  
 
   g.append("svg:rect")
       .attr("rx", li.r)
       .attr("ry", li.r)
       .attr("width", li.w)
       .attr("height", li.h)
-      .style("fill", function(d) { return d.value; });
+      .style("fill", function (d) {
+          return d.value;
+      });
 
   g.append("svg:text")
       .attr("x", li.w / 2)
       .attr("y", li.h / 2)
       .attr("dy", "0.35em")
+      .attr("class", "label")
       .attr("text-anchor", "middle")
-      .text(function(d) { return d.key; });
+      .text(function (d) {
+          return d.key;
+      });
 }
 
 function toggleLegend() {
