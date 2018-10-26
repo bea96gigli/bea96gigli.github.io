@@ -6,6 +6,7 @@
   width: 1460px;
   height: 700px;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 #main {
@@ -15,7 +16,7 @@
 
 #sidebar {
   float: right;
-  width: 340px;
+  width: 350px;
 }
 
 #sequence {
@@ -23,17 +24,9 @@
   height: 70px;
 }
 
-#legend {
-  padding: 10px 0 0 3px;
-}
-
 #sequence text, .label {
   font-weight: 400;
    fill: white;
-}
-
-.header{
-    fill: black;
 }
 
 #chart {

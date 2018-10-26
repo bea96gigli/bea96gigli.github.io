@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Sequences sunburst</title>
+    <title>Ruoli e Famiglie</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
@@ -10,22 +12,43 @@
 	
 </head>
 <body>
-    <div id="main">
-        <div id="sequence"></div>
-        <div id="chart">
-            <div id="explanation" style="visibility: hidden;">
-                <span id="percentage"></span>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-collapse collapse w-25 order-1 order-md-0 dual-collapse2">
+                <span class="navbar-nav mr-auto">
+                    <img src="intesa_group_services.jpg" class="img-fluid" alt="Responsive image">
+                </span>
             </div>
-        </div>        
-    </div>
-    <div id="sidebar">
-        <input type="checkbox" id="togglelegend"> Legend<br />
-        <div id="legend" style="visibility: hidden;"></div>
-    </div>
-    <script type="text/javascript" src="sequences.js"></script>
-    <script type="text/javascript">
-        // Hack to make this example display correctly in an iframe on bl.ocks.org
-        d3.select(self.frameElement).style("height", "700px");
-    </script>
+            <div class="mx-auto order-0">
+                <span class="navbar-brand mx-auto">
+                    <h1 style="font-family: Calibri; font-size: 40px; ">Ruoli e Famiglie</h1>
+                </span>
+            </div>
+            <div class="navbar-collapse collapse w-25 order-3 dual-collapse2">
+                <span class="navbar-nav ml-auto">
+                    <img src="SIT2020.jpg" class="img-fluid" alt="Responsive image">
+                </span>
+            </div>
+        </nav><br/>
+    
+        <div id="main">
+            <div id="sequence"></div>
+            <div id="chart">
+                <div id="explanation" style="visibility: hidden;">
+                    <span id="percentage"></span>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar">
+            <input type="checkbox" id="togglelegend"> <span>Legenda</span><br />
+            <div id="legend" style="visibility: hidden;"></div>
+        </div>
+        <script type="text/javascript" src="sequences.js"></script>
+        <script type="text/javascript">
+            // Hack to make this example display correctly in an iframe on bl.ocks.org
+            d3.select(self.frameElement).style("height", "700px");
+        </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
