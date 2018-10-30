@@ -10,112 +10,112 @@ var b = {
 
 // Mapping of step names to colors.
 var colors = {
-    "Ruoli Tradizionali": "#5687d1",
-    "Ruoli Strategici": "#9C807B",
-    "CAPACITY & AVAILABILITY  MGMT": "#DF34CE",
-    "CLOUD INFRASTRUCTURE": "#599A69",
-    "COLLABORATION SOLUTION": "#3BC655",
-    "DATA COMUNICATION": "#52B087",
-    "DATA INFRASTRUCTURE": "#6FBF7A",
+    "Ruoli Tradizionali": "#9C807B",
+    "Ruoli Strategici": "#638CCA",
+    "CAPACITY & AVAILABILITY  MGMT": "#6ab975",
+    "CLOUD INFRASTRUCTURE": "#A07B52",
+    "COLLABORATION SOLUTION": "#7C6040",
+    "DATA COMUNICATION": "#679970",
+    "DATA INFRASTRUCTURE": "#68B072",
     "DATACENTER INFRASTRUCTURE": "#B0895E",
-    "DEVOPS INFRASTRUCTURE": "#50C893",
-    "DR&BC INFRASTRUCTURE": "#70A77A",
+    "DEVOPS INFRASTRUCTURE": "#70A77A",
+    "DR&BC INFRASTRUCTURE": "#90DB99",
     "END USER INFRASTRUCTURE": "#C28F54",
-    "INFRASTRUCTURE AUTOMATION AND CONFIGURATION": "#4F905E",
-    "INFRASTRUCTURE FINANTIAL & CONTRACTS": "#B671D7",
-    "INFRASTRUCTURE for INNOVATION TECHONLOGY": "#6AA779",
-    "INFRASTRUCTURE MONITORING": "#D66BB8",
-    "INFRASTRUCTURE SERVICE MANAGEMENT": "#BA9858",
-    "INFRASTRUCTURE TRANSFORMATION": "#6ab975",
-    "NETWORK INFRASTRUCTURE": "#D55DF2",
-    "SOFTWARE DEFINED INFRASTRUCTURE": "#5A9B66",
-    "SECURITY INFRASTRUCTURE": "#E55EBF",
+    "INFRASTRUCTURE AUTOMATION AND CONFIGURATION": "#CB7F29",
+    "INFRASTRUCTURE FINANTIAL & CONTRACTS": "#6AA779",
+    "INFRASTRUCTURE for INNOVATION TECHONLOGY": "#BA772C",
+    "INFRASTRUCTURE MONITORING": "#73CA7F",
+    "INFRASTRUCTURE SERVICE MANAGEMENT": "#8ACA92",
+    "INFRASTRUCTURE TRANSFORMATION": "#50C893",
+    "NETWORK INFRASTRUCTURE": "#5A9B66",
+    "SOFTWARE DEFINED INFRASTRUCTURE": "#906E48",
+    "SECURITY INFRASTRUCTURE": "#71AF95",
 
 
-    "Functional Testing Engineer": "#D3D3D3",
-    "API Specialist": "#D3D3D3",
-    "Build and Deploy Specialist": "#D3D3D3",
-    "DevOps Operator": "#D3D3D3",
-    "DevOps Specialist": "#D3D3D3",
-    "Build and Deploy Engineer": "#D3D3D3",
-    "Infrastructure Referent Application Transformation": "#D3D3D3",
-    "Mobile Specialist ": "#D3D3D3",
-    "PaaS & Container Specialist": "#D3D3D3",
-    "Performance Test Specialist ": "#D3D3D3",
-    "Test Automation Specialist": "#D3D3D3",
+    "Functional Testing Engineer": "#989898",
+    "API Specialist": "#989898",
+    "Build and Deploy Specialist": "#989898",
+    "DevOps Operator": "#989898",
+    "DevOps Specialist": "#989898",
+    "Build and Deploy Engineer": "#989898",
+    "Infrastructure Referent Application Transformation": "#989898",
+    "Mobile Specialist ": "#989898",
+    "PaaS & Container Specialist": "#989898",
+    "Performance Test Specialist ": "#989898",
+    "Test Automation Specialist": "#989898",
 
-    "Delivery Manager": "#D0D0D0",
+    "Delivery Manager": "#A5A5A5",
     "IT Supplier Relationship Manager": "#D0D0D0",
-    "ITO Process Specialist": "#D0D0D0",
-    "Knowledge Management specialist": "#D0D0D0",
+    "ITO Process Specialist": "#A5A5A5",
+    "Knowledge Management specialist": "#A5A5A5",
     "Open Source Software Specialist": "#D0D0D0",
-    "Program & Transition Manager": "#D0D0D0",
-    "Project Manager ": "#D0D0D0",
-    "Infrastructure Solution Architect": "#D0D0D0",
+    "Program & Transition Manager": "#A5A5A5",
+    "Project Manager ": "#A5A5A5",
+    "Infrastructure Solution Architect": "#A5A5A5",
 
     "Data Base Engineer": "#C8C8C8",
     "Data Management Specialist": "#C8C8C8",
     "Data Solution Architect": "#C8C8C8",
     "Infrastructure Data Analyst/Scientist ": "#C8C8C8",
 
-    "Artificial Intelligence Specialist": "#C0C0C0",
-    "Blockchain Specialist": "#C0C0C0",
+    "Artificial Intelligence Specialist": "#696969",
+    "Blockchain Specialist": "#696969",
     "IoT Specialist": "#C0C0C0",
     "Technology Innovation Expert": "#C0C0C0",
 
     "Cloud Mgmt Platform & Contract Expert": "#B8B8B8",
-    "Cloud Service Broker Specialist": "#B8B8B8",
+    "Cloud Service Broker Specialist": "#696969",
     "Private & Public Cloud Infrastructure Architect": "#B8B8B8",
 
-    "DataCenter Automation Specialist": "#B0B0B0",
+    "DataCenter Automation Specialist": "#696969",
     "End User Automation Specialist": "#B0B0B0",
     "Configuration Specialist": "#B0B0B0",
 
-    "Software Defined Data Center Specialist ": "#A9A9A9",
-    "Software Defined Network Specialist": "#A9A9A9",
-    "Software Defined Storage Specialist": "#A9A9A9",
+    "Software Defined Data Center Specialist ": "#696969",
+    "Software Defined Network Specialist": "#696969",
+    "Software Defined Storage Specialist": "#787878",
 
-    "Data Communication Engineer": "#A5A5A5",
-    "Data Communication Specialist": "#A5A5A5",
+    "Data Communication Engineer": "#787878",
+    "Data Communication Specialist": "#787878",
 
-    "Collaboration Specialist": "#A5A5A5",
+    "Collaboration Specialist": "#787878",
 
-    "Data Base Engineer": "#A0A0A0",
-    "Data Management Specialist": "#A0A0A0",
-    "Data Solution Architect": "#A0A0A0",
-    "Infrastructure Data Analyst/Scientist ": "#A0A0A0",
+    "Data Base Administrator": "#929292",
+    "Data Management Specialist": "#929292",
+    "Data Solution Architect": "#929292",
+    "Infrastructure Data Analyst/Scientist ": "#929292",
 
-    "Data Center Operator ": "#989898",
+    "Data Center Operator ": "#D0D0D0",
     "Data Center System Engineer": "#989898",
-    "Data Center System Engineer": "#989898",
-    "Data Center System Specialist": "#989898",
-    "Scheduling Specialist": "#989898",
+    "Data Center System Engineer": "#C8C8C8",
+    "Data Center System Specialist": "#D3D3D3",
+    "Scheduling Specialist": "#C8C8C8",
 
     "End User IMAC Specialist": "#959595",
     "End User Operator": "#959595",
     "End User System Engineer ": "#959595",
 
-    "Problem Manager": "#909090",
-    "Service Catalog Manager": "#909090",
-    "Service Owner": "#909090",
+    "Problem Manager": "#B2B1B1",
+    "Service Catalog Manager": "#A5A5A5",
+    "Service Owner": "#B2B1B1",
 
     "DR & Business Continuity Engineer": "#929292",
-    "DR & Business Continuity Specialist": "#929292",
+    "DR & Business Continuity Specialist": "#B2B1B1",
 
-    "Data Communication Engineer": "#929292",
-    "Data Communication Specialist": "#929292",
+    "Data Communication Engineer": "#C0C0C0",
+    "Data Communication Specialist": "#C0C0C0",
 
-    "Infrastructure Contract Specialist": "#888888",
-    "Infrastructure Financial Specialist": "#888888",
+    "Infrastructure Contract Specialist": "#B2B1B1",
+    "Infrastructure Financial Specialist": "#B2B1B1",
 
-    "Network System Engineer": "#787878",
-    "Network Automation Specialist": "#787878",
+    "Network System Engineer": "#BDBDBD",
+    "Network Automation Specialist": "#BDBDBD",
 
-    "Capacity & Availability Specialist": "#696969",
+    "Capacity & Availability Specialist": "#B2B1B1",
 
-    "Monitoring Infrastructure engineer": "#696969",
+    "Monitoring Infrastructure engineer": "#B2B1B1",
 
-    "Security Infrastructure Specialist": "#696969"
+    "Security Infrastructure Specialist": "#B2B1B1"
 };
 
 // Total size of all segments; we set this later, after loading the data.
@@ -161,8 +161,12 @@ function createVisualization(json) {
 
     // Turn the data into a d3 hierarchy and calculate the sums.
     var root = d3.hierarchy(json)
-        .sum(function (d) { return d.size; })
-        .sort(function (a, b) { return b.value - a.value; });
+        .sum(function (d) {
+            return d.size;
+        })
+        .sort(function (a, b) {
+            return b.value - a.value;
+        });
 
     // For efficiency, filter nodes to keep only those large enough to see.
     var nodes = partition(root).descendants()
@@ -190,21 +194,21 @@ function createVisualization(json) {
 // Fade all but the current sequence, and show it in the breadcrumb trail.
 function mouseover(d) {
 
-    var percentage = (100 * d.value / totalSize).toPrecision(3);
-    var percentageString = percentage + "%";
+    var percentage = d.value;
+    /*var percentageString = percentage + "%";
     if (percentage < 0.1) {
         percentageString = "< 0.1%";
     }
-
+    */
     d3.select("#percentage")
-        .text(percentageString);
+        .text(percentage);
 
     d3.select("#explanation")
         .style("visibility", "");
 
     var sequenceArray = d.ancestors().reverse();
     sequenceArray.shift(); // remove root node from the array
-    updateBreadcrumbs(sequenceArray, percentageString);
+    updateBreadcrumbs(sequenceArray, percentage);
 
     // Fade all the segments.
     d3.selectAll("path")
