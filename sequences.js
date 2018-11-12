@@ -3,6 +3,8 @@ var width = 1110;
 var height = 600;
 var radius = Math.min(width, height) / 2;
 
+var personeTotali;
+
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
     w: 350, h: 30, s: 3, t: 10
@@ -10,8 +12,8 @@ var b = {
 
 // Mapping of step names to colors.
 var colors = {
-    "Ruoli Tradizionali": "#9C807B",
-    "Ruoli Strategici": "#638CCA",
+    "Ruoli Tradizionali in evoluzione": "#9C807B",
+    "Ruoli Strategici per il Piano Industriale e Nuovi Mestieri": "#638CCA",
     "CAPACITY & AVAILABILITY  MGMT": "#6ab975",
     "CLOUD INFRASTRUCTURE": "#A07B52",
     "COLLABORATION SOLUTION": "#7C6040",
@@ -189,26 +191,30 @@ function createVisualization(json) {
 
     // Get total size of the tree = value of root node from partition.
     totalSize = path.datum().value;
+    d3.select("#people")
+        .text(totalSize);
+
+    personeTotali = totalSize;
 };
 
 // Fade all but the current sequence, and show it in the breadcrumb trail.
 function mouseover(d) {
 
-    var percentage = d.value;
+    var people = d.value;
     /*var percentageString = percentage + "%";
     if (percentage < 0.1) {
         percentageString = "< 0.1%";
     }
     */
-    d3.select("#percentage")
-        .text(percentage);
+    d3.select("#people")
+        .text(people);
 
     d3.select("#explanation")
-        .style("visibility", "");
+        .style("visibility", "visible");
 
     var sequenceArray = d.ancestors().reverse();
     sequenceArray.shift(); // remove root node from the array
-    updateBreadcrumbs(sequenceArray, percentage);
+    updateBreadcrumbs(sequenceArray, people);
 
     // Fade all the segments.
     d3.selectAll("path")
@@ -242,7 +248,11 @@ function mouseleave(d) {
         });
 
     d3.select("#explanation")
-        .style("visibility", "hidden");
+        .style("visibility", "visible");
+
+    d3.select("#people")
+        .text(personeTotali);
+    
 }
 
 function initializeBreadcrumbTrail() {
