@@ -14,6 +14,9 @@
   width: 1110px;
 }
 
+/*  sidebar è la Legenda. Le sue dimensioni vengono stabilite dinamicamente nel file js in base al numero di nodi che trova nel file csv.
+    Ricordare che nella legenda appaiono solo i ruoli che hanno un peso minimo di 1, perciò se nel csv vi sono nodi con perso 0, 
+    questi non verranno inseriti nella Legenda.*/
 #sidebar {
   float: right;
   width: 350px;

@@ -52,16 +52,11 @@ var colors = {
     'Data Base Engineer':'#BDBDBD',
     'Data Base Specialist':'#BDBDBD',
     'Data Center Operator ':'#D0D0D0',
-    'Data Center System Engineer':'#989898',
     'Data Center System Engineer':'#C8C8C8',
     'Data Center System Specialist':'#D3D3D3',
-    'Data Communication Engineer':'#787878',
     'Data Communication Engineer':'#C0C0C0',
-    'Data Communication Specialist':'#787878',
     'Data Communication Specialist':'#C0C0C0',
     'Data Management Specialist':'#C8C8C8',
-    'Data Management Specialist':'#C8C8C8',
-    'Data Solution Architect':'#BDBDBD',
     'Data Solution Architect':'#BDBDBD',
     'DataCenter Automation Specialist':'#989898',
     'Delivery Manager':'#A5A5A5',
@@ -70,7 +65,6 @@ var colors = {
     'DR & Business Continuity Engineer':'#929292',
     'DR & Business Continuity Specialist':'#989898',
     'End User Automation Specialist':'#989898',
-    'End User IMAC Specialist':'#959595',
     'End User Operator':'#C8C8C8',
     'End User Specialist':'#C8C8C8',
     'End User System Engineer ':'#C8C8C8',
@@ -327,7 +321,7 @@ function drawLegend() {
 
     legend.append("svg:text")
         .attr("x", (li.w / 3) + 16)
-        .attr("y", 122)
+        .attr("y", 155)
         .text("FAMIGLIE")
         .attr("class", "header")
         .attr("font-family", "Arial")
@@ -336,7 +330,7 @@ function drawLegend() {
 
     legend.append("svg:text")
         .attr("x", (li.w / 3) + 32)
-        .attr("y", 750)
+        .attr("y", 848)
         .text("RUOLI")
         .attr("class", "header")
         .attr("font-family", "Arial")
@@ -347,12 +341,12 @@ function drawLegend() {
         .data(d3.entries(colors))
         .enter().append("svg:g")
         .attr("transform", function (d, i) {
-            if (i > 19)
-                return "translate(0," + (i + 3) * (li.h + li.s) + ")";
-            if (i > 1)
-                return "translate(0," + (i + 2) * (li.h + li.s) + ")";
+            if (i > 22)
+                return "translate(0," + (i + 3) * (li.h + li.s) + ")";  //primo elemento ruoli (spostato di 3 per dare spazio alle tre etichette CLASSI, FAMIGLIE e RUOLI).
+            if (i > 2)
+                return "translate(0," + (i + 2) * (li.h + li.s) + ")";  //primo elemento famiglie (spostato di 2 per dare spazio alle due etichette CLASSI e FAMIGLIE).
             else
-                return "translate(0," + (i + 1) * (li.h + li.s) + ")";
+                return "translate(0," + (i + 1) * (li.h + li.s) + ")";  //primo elemento classi (spostato di 1 per dare spazio all'etichetta CLASSI).
         });
 
 
